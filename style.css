@@ -1,0 +1,198 @@
+:root {
+    /*Background & Foreground*/
+    --bg1: #1f1b22;
+    --bg2: #141118;
+    --bg3: ;
+
+    --fg1: #c2b9b9;
+    --fg2:  ;
+    
+    
+    /*Base colors*/
+    --accent: var(--purple);
+
+    --purple: #61378b;
+    --blue: #5a6cd6;
+    --red: ;
+
+    /* Text colors*/
+    --link: #b9acca;
+
+    /*Styling variables*/
+    --c_rnd: 13px;
+    --btn_rnd: 9px;
+
+    /*Background image tiled*/
+    --bg-img: url(assets/pattern.png); 
+}
+
+/* Base template */
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    color: var(--fg1);
+    background-color: var(--bg1);
+    background-image: var(--bg-img);
+    background-repeat: repeat;
+    background-size: 85px;
+    margin: 0;
+
+    animation: scrolling 8s linear 1;
+    animation-direction: forward;
+    animation-iteration-count: infinite;
+}
+
+.c-main-container {
+    margin-left: 28%;
+    margin-right: 28%;
+    max-width: 1200px;
+}
+
+.c-box {
+    padding: 10px;
+    margin-top: 8px;
+    margin-left: 4px;
+    margin-right: 4px;
+    background-color: var(--bg2);
+    border-radius: var(--c_rnd);
+    backdrop-filter: blur(25px);
+    filter: opacity(85%);
+}
+
+.c-content {
+    text-align: justify;
+}
+
+
+
+/* Tags */
+
+.flex {
+    display: flex;
+}
+
+
+/* Default resetting */
+
+
+.c-box :is(h1, h2, h3, h4, h5, h6, p) {
+    margin: 0px;
+}
+
+
+.c-content :is(h1, h2, h3, h4, h5, h6, p) {
+    margin: 10px;
+}
+
+img {
+    border-radius: var(--c_rnd);
+}
+
+a {
+    text-decoration: none;
+    color: var(--link);
+}
+
+.center-jst {
+    justify-content: center;
+}
+
+/* Elements */
+
+.btn {
+    border-radius: var(--btn_rnd);
+    
+}
+
+.btn-regular {
+    background-color: var(--bg1);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 8px;
+}
+
+.btn-nav {
+    background-color: var(--bg1);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 8px;
+}
+
+/* Boxes styling */
+
+.c-profile {
+    display: flex;
+}
+
+.c-profile-picture {
+    position: relative;
+    top: -50;
+    left: 10;
+    height: 120px;
+    border: 6px var(--bg2) solid;
+    border-radius: 16px;
+}
+
+.c-profile-header {
+    margin-left: 25px;
+}
+
+.c-navbar {
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.c-navbar-right {
+    margin-left: auto;
+}
+
+
+
+@media (min-width: 320px) and (max-width: 999px) {
+
+    body {
+
+        margin-top: 10px;
+    }
+
+    .c-main-container {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+  
+    .c-profile-picture {
+        position: relative;
+        justify-content: center;
+    }
+
+    .btn-nav {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+    .c-navbar {
+        justify-content: center;
+    }
+
+    .c-vertical {
+        flex-direction: column;
+    }
+
+}
+
+@-webkit-keyframes scrolling {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -85px 85px;
+    }
+}
