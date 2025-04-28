@@ -1,0 +1,25 @@
+:root {
+    --background:  #1b1919; 
+    --background2:;
+    --background3: #151414; /* codeblocks */
+
+    --foreground: #cdcdcd; /* text */   
+
+    --accent:;
+    --borders: #2f2d2d; 
+    --links: var(--accent);
+
+
+    /*Replacing these*/
+    --light-text-color: #dfdfdf;
+    --link-color: #a3b8f5;
+    --active-link-color: #f9f9f9;
+    --nav-item-link-color: #a3b8f5;
+    --nav-item-active-color: #a3b8f5;
+    --callout-background-color: #2445a8;
+    --callout-text-color: #f9f9f9;
+    --callout-link-color: #e8eefd;
+    --callout-highlight-color: #bac9f7;
+    --blockquote-highlight-color: #dfdfdf;
+    --social-icon-color: #a3b8f5;
+}

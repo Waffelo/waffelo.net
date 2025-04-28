@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article class="h-entry">
+    <div class="post-metadata">
+	    <h1 class="post-title p-name"><span style="color: grey;">#</span>  {{ .Title }}</h1>
+	<hr>
+        <p class="post-date">
+            <span class="post-date">
+                Published on
+                <a class="u-url" href="{{ .Permalink }}"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date | time.Format ":date_long" }}</time></a>
+                by {{ with .Site.Params.Hcard.Avatar }}<img class="u-photo" alt="" src="{{ . | absURL }}"> {{ end }}<a class="p-author h-card" rel="author" href="{{ .Site.BaseURL }}">{{ .Site.Params.Hcard.FullName }}</a>
+		</span> 
+		<b>Tags:</b>{{ with .Params.tags }}<!--<p>-->{{ range $i, $tag := . }}<code><a href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}">{{ $tag }}</a></code>{{ if lt (add $i 1) (len .) }} {{ end }}{{ end }}<!--</p>-->{{ end }} 
+
+        </p>
+    </div>
+    <div class="post-content e-content">
+        {{.Content}}
+    </div>
+</article>
+{{ end }}

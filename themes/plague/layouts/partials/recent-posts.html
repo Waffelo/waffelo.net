@@ -1,0 +1,25 @@
+<h2><span style="color:gray;">#</span> Recent posts</h2>
+<div style="display: flex; border: 2px dashed var(--borders); padding:15px;  margin:15px;">
+
+	<div style="width:100%;">
+		<h2> Blog 📜 </h2>
+		<ul>
+		  {{ range first 5 (where .Site.RegularPages "Section" "posts" ) }}
+		    <li>[{{ .Date.Format "02/01/2006" }}] - <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+		  {{ end }}
+		</ul>
+	</div>
+
+	<div style="width:15%;"></div>
+
+	<div style="width:100%;">
+		<h2> Journal 📓 </h2>
+		<ul>
+		  {{ range first 5 (where .Site.RegularPages "Section" "journal" ) }}
+		    <li>[{{ .Date.Format "02/01/2006" }}] - <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+		  {{ end }}
+		</ul>
+	</div>
+
+</div>
+<br>

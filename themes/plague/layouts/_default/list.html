@@ -1,0 +1,27 @@
+{{ define "main" }}
+	{{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+	  {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+          <div class="tagbutton" style="display: inline;">
+		  <a href={{ .RelPermalink }} style="text-decoration: none; color: var(--text-color);" title="All pages with tag <i>{{$name}}</i>"><code>{{$name}} ({{$cnt}})</code></a>
+          </div>
+	  {{end}}
+	{{end}}
+
+
+<br><br>
+<h2>Posts</h2>
+
+
+{{ range .Paginator.Pages }}
+
+<span class="post-date"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">[{{ .Date | time.Format "02/01/2006" }}]</time></span> - <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
+
+{{ end }}
+
+
+
+{{ with .OutputFormats.Get "rss" -}}
+<p><a href="{{ .Permalink }}"><img alt="RSS feed icon" src="{{ "icons/rss.png" | absURL }}"></a></p>
+
+{{ end }}
+{{ end }}
