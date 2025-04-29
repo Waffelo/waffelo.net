@@ -5,7 +5,7 @@ baseURL = 'https://waffelo.net/'
 languageCode = 'en-us'
 
 enableRobotsTXT = true
-theme = 'plague'
+theme = 'dragoncave'
 
 # --- Theme parameters ------------------
 
@@ -14,7 +14,7 @@ theme = 'plague'
   siteFooterText = "© 2025 Jakub Heger"
 
 [params.hcard]
-    avatar = "https://git.drgnz.club/avatars/5d0444fc800f37d549f5497d4c9690005485540a1b89ee5389e86d06f3d529b3?size=512"
+    avatar = "/img/pfp.png"
     fullName = "Jakub Heger"
     nickname = "Waffelo"
 

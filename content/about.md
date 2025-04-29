@@ -8,7 +8,7 @@ draft = false
 # About me
 <br />
 <div class="about-container">
-    <img src="https://wakatime.com/photo/29725049-7048-4ebb-8064-21f95716ce5a?s=420&cache=false&time=1745901739.0988936" width="180px">
+    <img src="/img/pfp.png" width="180px">
     <div class="about-info" style="margin-left: 20px;">
         <h2 style="font-weight:900;">Waffelo</h2>
         <i>(Jakub Heger)</i><br>
