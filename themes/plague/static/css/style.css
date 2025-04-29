@@ -19,7 +19,7 @@ html {
 
 body {
     background: var(--background);
-    background-image: url(/content/pictures/checkers.png);
+    background-image: url("/img/checkers.png");
     color: var(--foreground);
     font-family: monospace;
     font-size: 13.8px;
