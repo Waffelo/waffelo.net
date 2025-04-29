@@ -110,6 +110,8 @@ code {
 
 a.nav-item:hover {
     text-decoration: none;
+    color: var(--links-hover);
+    border-color: var(--links-hover);
 }
 
 .content {
