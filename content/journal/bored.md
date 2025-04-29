@@ -1,7 +1,7 @@
 +++
 title = 'Bored'
 date = 2025-04-29T06:24:50+02:00
-draft = true
+draft = false
 +++
 
 Past couple months I have fallen into this weird not doing anything
@@ -15,4 +15,10 @@ setting up things for all days, doing nothing else than look into the
 commandline for hours at time. Maybe I really just need something new.
 
 &nbsp;
-### What do I even need?
+### What do I even need to do?
+I think I need some refreshment in my activities, because as I said, I 
+only did monotone boring things on repeat. I really would like to learn
+some programming languages such as C, Python, Haskell or Zig. Maybe
+even something like Java and Lua for modding Luanti, Gmod and Minecraft.
+I also would like to try doing more electronics, make some circuits and
+devices. That could be fun too.

@@ -28,7 +28,7 @@ because of the restrictions. I really would rather use bare TTY on Linux
 than Windows itself.
 
 <center>
-    <img src="/pictures/fursona/stickers/spit_fire.png" width="280px">
+    <img src="/img/fursona/stickers/spit_fire.png" width="280px">
 </center>
 
 
@@ -42,7 +42,7 @@ me some benefits like learning how to write better, finding interesting people,
 expressing my ideas and some more.
 
 <center>
-    <img src="/pictures/fursona/stickers/think.png" width="220px">
+    <img src="/img/fursona/stickers/think.png" width="220px">
 </center>
 
 &nbsp;
