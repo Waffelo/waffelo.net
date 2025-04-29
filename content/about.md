@@ -8,7 +8,7 @@ draft = false
 # About me
 <br />
 <div class="about-container">
-    <img src="https://git.drgnz.club/avatars/5d0444fc800f37d549f5497d4c9690005485540a1b89ee5389e86d06f3d529b3" width="180px">
+    <img src="https://wakatime.com/photo/29725049-7048-4ebb-8064-21f95716ce5a?s=420&cache=false&time=1745901739.0988936" width="180px">
     <div class="about-info" style="margin-left: 20px;">
         <h2 style="font-weight:900;">Waffelo</h2>
         <i>(Jakub Heger)</i><br>
