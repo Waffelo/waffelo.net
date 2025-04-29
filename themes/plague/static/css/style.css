@@ -1,14 +1,9 @@
 .site-content {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     max-width: 740px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding: 0px 30px 0px 30px;
+    margin: 0px auto 0px auto;
     border: 1px solid var(--borders);
     background-color: var(--background);
 }
@@ -92,27 +87,9 @@ code {
 .site-nav .nav-item {
     color: var(--nav-item-link-color);
     text-decoration: none;
-    padding: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-.nav-item.first {
-    margin-left: 0px;
-}
-
-.nav-item.last {
-    margin-right: 0px;
-}
-
-.nav-item.active {
-    border-bottom: 2px solid var(--nav-item-active-color);
+    margin: 0px 10px 10px 0px;
+    padding: 10px 0px 10px 0px;
+    border-bottom: 2px dashed var(--link-color);
 }
 
 @media screen and (min-width: 800px) {
@@ -269,11 +246,19 @@ hr {
 
     img[src$='#floatleft']{
 	float:none;
-     }
+    }
 
     img[src$='#floatright']{
 	float:none;
-     }
+    }
+
+    .recentp-container {
+        display: block !important;
+    }
+
+    .recentp-item ul {
+        padding-left: 18px;
+    }
 
 }
 
@@ -334,7 +319,6 @@ img[src$='#floatleft']
 	float:left;
 	margin: 20px;
 	max-width: 40%;
-	//etc. etc/
 }
 
 img[src$='#floatright']
@@ -342,5 +326,19 @@ img[src$='#floatright']
 	float:right;
 	margin: 20px;
 	max-width: 40%;
-       //etc. etc.
+}
+
+.recentp-container {
+        display: flex;
+        border: 2px dashed var(--borders);
+        padding: 15px;
+        margin: 15px;
+}
+
+.recentp-item {
+        width: 100%;
+}
+
+.recentp-spacer {
+        width: 15%;
 }
