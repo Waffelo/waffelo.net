@@ -10,6 +10,7 @@
     padding-right: 30px;
     padding-left: 30px;
     border: 1px solid var(--borders);
+    background-color: var(--background);
 }
 
 html {
@@ -18,6 +19,7 @@ html {
 
 body {
     background: var(--background);
+    background-image: url(/content/pictures/checkers.png);
     color: var(--foreground);
     font-family: monospace;
     font-size: 13.8px;
@@ -47,8 +49,7 @@ p {
 }
 
 a {
-    text-decoration: underline;
-    color: var(--linss);
+    color: var(--links);
 }
 
 a:active {
