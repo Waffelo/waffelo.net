@@ -1,4 +1,5 @@
-<center><h1>Welcome to my website!</h1></center><br>
+<center><h1>Welcome to my website!</h1></center><hr style="margin-left:auto;margin-right:auto;margin-top;0px;">
+
 Hi! Welcome to my personal website and blog. I made this
 website to present myself, my projects, thoughts and opinions. I hope
 to post here regularly since I remade my website in static site generator.

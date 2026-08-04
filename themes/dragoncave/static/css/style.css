@@ -1,11 +1,17 @@
 .site-content {
-display: flex;
-flex-direction: column;
-max-width: 740px;
-padding: 0px 30px 0px 30px;
-margin: 0px auto 0px auto;
-border: 1px solid var(--borders);
-background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+
+    max-width: 740px;
+    padding: 0px 30px 0px 30px;
+    margin: 0px auto 0px auto;
+
+    border: 2px solid var(--borders);
+    outline: 10px solid var(--background-secondary);
+
+    background-color: var(--background-secondary);
+    box-shadow: 20px 20px 10px #0000003d;
+    backdrop-filter: blur(5px);
 }
 
 ::selection {
@@ -22,15 +28,16 @@ border-radius: 8px;
 }
 
 body {
-background: var(--background);
-background-image: url("/img/checkers.png");
-color: var(--foreground);
-font-family: monospace;
-font-size: 13.8px;
-line-height: 1.5;
-margin: 0px;
-padding: 0px;
+    background: var(--background);
+    background-image: url("/images/checkers_drgn.png");
+    color: var(--foreground);
+    font-family: monospace;
+    font-size: 13.8px;
+    line-height: 1.5;
+    margin: 0px;
+    padding: 0px;
 }
+
 
 .center {
 display: flex;
@@ -100,7 +107,12 @@ a:active {
 code {
     padding: 5px;
     margin: 5px;
-    background-color: var(--background3);
+    background-color: var(--background-tertiary);
+}
+
+
+header {
+    border-bottom: 1px solid var(--borders);
 }
 
 .site-header {
@@ -109,6 +121,7 @@ code {
     line-height: 54px;
     letter-spacing: -1px;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 .site-header, .site-header:visited, .site-header:hover {
@@ -117,11 +130,11 @@ code {
 }
 
 .site-header a:hover {
-    border-bottom: var(--accent) 2px dashed;
+    /* border-bottom: var(--accent) 2px dashed; */
 }
 
 .site-header a {
-    border-bottom: 2px dashed #cccccc57;
+    /* border-bottom: 2px dashed #cccccc57; */
 }
 
 .header-container {
@@ -143,11 +156,10 @@ code {
 }
 
 .site-nav .nav-item {
-    color: var(--links);
+    color: var(--foreground);
     text-decoration: none;
     margin: 0px 10px 10px 0px;
     padding: 10px 0px 10px 0px;
-    border-bottom: 2px dashed var(--links);
 }
 
 .sticker-list li {
@@ -175,7 +187,7 @@ code {
 }
 
 .art-container {
-    background-color: var(--background2);
+    background-color: var(--background-secondary);
     flex-grow: 1;
     margin: 10px;
     height: 180px;
@@ -200,7 +212,7 @@ code {
 }
 
 .striped tr:nth-child(odd) {
-    background-color: var(--background3);
+    background-color: var(--background-tertiary);
 }
 
 
@@ -272,7 +284,7 @@ code {
 .info-box th {
     color: var(--foreground2);
     padding: 8px;
-    background-color: var(--background3);
+    background-color: var(--background-tertiary);
 
 }
 
@@ -417,7 +429,7 @@ pre, code {
 
 pre, .hljs{
     padding: 0px 0px 0px 10px;
-    background-color: var(--background3) !important;
+    background-color: var(--background-tertiary) !important;
     color: var(--foreground);
     overflow-x: auto;
     border-left: 5px solid var(--accent)
@@ -425,7 +437,7 @@ pre, .hljs{
 
 blockquote {
     color: var(--blockquote-text-color);
-    background-color: var(--background3);
+    background-color: var(--background-tertiary);
     border-left: 10px solid var(--blockquote-highlight-color);
     border-radius: 5px;
     font-size: 14px;
