@@ -1,0 +1,52 @@
+{{ define "main" }}
+<div style="display: inline-flex;">
+<h1>📖 Posts</h1> &nbsp;
+    {{ with .OutputFormats.Get "rss" -}}
+        <a href="{{ .Permalink }}"><img alt="RSS feed icon" src="{{ "icons/rss.png" | absURL }}"></a>
+    {{ end }}
+</div>
+<hr class="hr-wide">
+
+<strong><u>Sort by tag:</u></strong>
+	{{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+	  {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+          <div class="tag-list" style="display: inline;">
+            <a href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>"><code><span>{{$name}}</span> <i>({{$cnt}})</i></code></a>
+          </div>
+	  {{end}}
+	{{end}}
+
+<br><br>
+
+<p>Here are the meaningful blog posts that I have written and also yap session journal posts.</p>
+
+<div class="post-list-container">
+
+<div class="post-list-blog">
+<h2>📜 Blog:</h2>
+    {{ range .Paginator.Pages }}
+
+        <span class="post-date"><time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">[{{ .Date | time.Format "02/01/2006" }}]</time></span> - <a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
+
+    {{ end }}
+</div>
+
+
+
+<div class="post-list-journal">
+    <h2>📓 Journal:</h2>
+    {{ range  (where .Site.RegularPages "Section" "journal" ) }}
+        
+        <div style="display: flex;">
+            [{{ .Date.Format "02/01/2006" }}] -&nbsp; <a href="{{ .RelPermalink }}"> {{ .Title }}</a>
+        </div>
+
+    {{ end }}
+</div>
+
+
+</div> <!-- post list container end -->
+
+
+{{ end }}
+

@@ -1,0 +1,17 @@
+:root {
+    --background:  #1b1919; 
+    --background2: #1b1919;
+    --background3: #151414; /* codeblocks */
+
+    --foreground: #cdcdcd; /* text */   
+    --foreground2: #6c6969; /* footer */
+    --foreground3: #bbb5b5;
+
+    --accent: #5c4185;
+    --borders: #434242; 
+    
+    --links: #b280de;
+    --links-active: #b280de;
+    --links-hover: #7b63ab;
+
+}

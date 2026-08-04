@@ -1,0 +1,36 @@
+{{/* Usage: {{< optimized-c-img src="images/photo.jpg" alt="Description" width="800" >}} */}}
+
+    <!-- Clickable openable image -->
+
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" }}
+{{ $width := .Get "width" | default "800" }}
+{{ $class := .Get "class" }}
+
+{{ if $src }}
+  {{ $image := resources.Get $src }}
+  {{ if $image }}
+    {{ $widthStr := string $width }}
+    {{ $smallWidthStr := string (div (int $width) 2) }}
+    {{ $webp := $image.Resize (printf "%sx webp q85" $widthStr) }}
+    {{ $jpeg := $image.Resize (printf "%sx png q85" $widthStr) }}
+    {{ $small := $image.Resize (printf "%sx webp q80" $smallWidthStr) }}
+    
+    <picture class="{{ $class }}">
+      <source 
+        srcset="{{ $small.RelPermalink }} {{ div (int $width) 2 }}w, {{ $webp.RelPermalink }} {{ $widthStr }}w"
+        type="image/webp">
+      <img 
+        src="{{ $jpeg.RelPermalink }}" 
+        alt="{{ $alt }}"
+        onclick="window.open(this.src)"
+        loading="lazy"
+        width="{{ $widthStr }}"
+        style="cursor: pointer;"
+        {{ with $class }}class="{{ . }}"{{ end }}
+        >
+    </picture>
+  {{ else }}
+    <p><em>Image not found: {{ $src }}</em></p>
+  {{ end }}
+{{ end }}

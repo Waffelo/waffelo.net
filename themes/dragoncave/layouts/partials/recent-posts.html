@@ -1,0 +1,26 @@
+<h2><span style="color:gray;">#</span> Recent posts</h2>
+<div class="recentp-container">
+
+	<div class="recentp-item">
+		<h2> Blog 📜 </h2>
+		<ul>
+		  {{ range first 5 (where .Site.RegularPages "Section" "posts" ) }}
+		    <li>[{{ .Date.Format "02/01/2006" }}] - <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+		  {{ end }}
+		</ul>
+	</div>
+
+    <div class="vl"></div>
+    <div class="recentp-spacer"></div>
+
+	<div class="recentp-item">
+		<h2> Journal 📓 </h2>
+		<ul>
+		  {{ range first 5 (where .Site.RegularPages "Section" "journal" ) }}
+		    <li>[{{ .Date.Format "02/01/2006" }}] - <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+		  {{ end }}
+		</ul>
+	</div>
+
+</div>
+<br>

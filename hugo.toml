@@ -1,0 +1,63 @@
+title = "Waffelo's Den"
+author = "Jakub Heger"
+
+baseURL = 'https://waffelo.net/'
+languageCode = 'en-us'
+
+enableRobotsTXT = true
+theme = 'dragoncave'
+
+[imaging]
+  quality = 85
+  resampleFilter = "Lanczos"
+  anchor = "Smart"
+
+# --- Theme parameters ------------------
+
+[params]
+  siteHeaderText = "~/Waffelo's Den"
+  siteFooterText = "© 2026 Jakub Heger"
+  imageProcessing = true
+
+[params.hcard]
+    avatar = "/img/pfp.png"
+    fullName = "Jakub Heger"
+    nickname = "Waffelo"
+
+[taxonomies]
+   tag = "tags"
+   category = "categories"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[security]
+  enableInlineShortcodes = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+# --- Navbar ----------------------------
+
+[[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/posts"
+
+[[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "/about"
+
+[[menu.main]]
+    identifier = "stuff"
+    name       = "Stuff"
+    url        = "/stuff"
+
+[[menu.main]]
+    identifier = "contact"
+    name       = "Contact"
+    url        = "/contact"

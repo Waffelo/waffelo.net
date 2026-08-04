@@ -1,0 +1,32 @@
+{{/* Usage: {{< optimized-img src="images/photo.jpg" alt="Description" width="800" >}} */}}
+
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" }}
+{{ $width := .Get "width" | default "800" }}
+{{ $class := .Get "class" }}
+
+{{ if $src }}
+  {{ $image := resources.Get $src }}
+  {{ if $image }}
+    {{ $widthStr := string $width }}
+    {{ $smallWidthStr := string (div (int $width) 2) }}
+    {{ $webp := $image.Resize (printf "%sx webp q85" $widthStr) }}
+    {{ $jpeg := $image.Resize (printf "%sx jpg q85" $widthStr) }}
+    {{ $small := $image.Resize (printf "%sx webp q80" $smallWidthStr) }}
+    
+    <picture class="{{ $class }}">
+      <source 
+        srcset="{{ $small.RelPermalink }} {{ div (int $width) 2 }}w, {{ $webp.RelPermalink }} {{ $widthStr }}w"
+        type="image/webp">
+      <img 
+        src="{{ $jpeg.RelPermalink }}" 
+        alt="{{ $alt }}"
+        loading="lazy"
+        width="{{ $widthStr }}"
+        {{ with $class }}class="{{ . }}"{{ end }}
+        style="max-width: 100%; height: auto;">
+    </picture>
+  {{ else }}
+    <p><em>Image not found: {{ $src }}</em></p>
+  {{ end }}
+{{ end }}
