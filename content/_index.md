@@ -8,6 +8,7 @@ but it is not limited to them. I like to ramble about other things too.
 
 &nbsp;
 &nbsp;
-{{< optimized-img src="images/fursona/stickers/fabulous.png" alt="Desktop fastfetch" width="250" class="center">}}
+{{< optimized-img src="images/fursona/stickers/waffiphus.png" alt="Desktop fastfetch" width="250" class="center">}}
+ 
 
 
