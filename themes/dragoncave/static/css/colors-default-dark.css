@@ -1,15 +1,20 @@
 :root {
-    --background:  #1e1d1d; /*Behind the pattern*/
-    --background-secondary: #1b1919; /*Site content background*/
-    --background-tertiary: #151414; /* codeblocks */
+    --background: #1e1d1d;
+    /*Behind the pattern*/
+    --background-secondary: #1b1919e3;
+    /*Site content background*/
+    --background-tertiary: #151414;
+    /* codeblocks */
 
-    --foreground: #cdcdcd; /* text */   
-    --foreground2: #6c6969; /* footer */
+    --foreground: #cdcdcd;
+    /* text */
+    --foreground2: #6c6969;
+    /* footer */
     --foreground3: #bbb5b5;
 
     --accent: #5c4185;
-    --borders: #434242; 
-    
+    --borders: #434242;
+
     --links: #b280de;
     --links-active: #b280de;
     --links-hover: #7b63ab;
