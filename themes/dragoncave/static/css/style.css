@@ -31,7 +31,7 @@ img {
 body {
     background: var(--background);
     /* background-image: url("/images/checkers_drgn.png"); */
-    background-image: url("/images/site_bg.jpg");
+    background-image: url("/images/site_bg.png");
     /* background-size: 100px; */
 
     color: var(--foreground);
