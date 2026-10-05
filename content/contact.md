@@ -7,19 +7,15 @@ draft = false
 
 # Contact me ☎️
 <hr class="hr-wide">
-If you are interested in what I am doing and have some questions, tips or ideas. You
-can connect with me via listed options.
-
+You can contact me suing below listed methods. No, I won't use Discord.
 
 * **Matrix:** `@waffelo:drgnz.club`[(quick link)](https://matrix.to/#/@waffelo:drgnz.club) <- ⭐ I prefer this
-* **Email:** `contact@waffelo.net`[(quick link)](mailto:contact@waffelo.net)
-* **Telegram:** `@waffelo`
+* **XMPP:** `@waffelo:unix.dog` (Inactive)
+* **Email:** `contact [at] waffelo.net` (slow)
+* **Telegram:** `@waffelo` 
 
-
-&nbsp;
 ## Sites
-I don't move around social sites that much, but I have some.
-
+Websites on which I am active on.
 
 * **Youtube:** `@waffelo`[(quick link)](https://www.youtube.com/@Waffelo) 
 * **Forgejo:** `@waffelo`[(quick link)](https://git.drgnz.club/Waffelo) 
@@ -27,6 +23,10 @@ I don't move around social sites that much, but I have some.
 * **Printables:** `@waffelo`[(quick link)](https://www.printables.com/@waffelo) 
 * **Mastodon:** `@waffelo@woof.tech`[(quick link)](https://woof.tech/@waffelo)
 
+## Games
+
+* **Minecraft:** `Waffelo`[(nameMC)](https://namemc.com/profile/Waffelo.2) 
+* **Steam:** `waffelo`[(quick link)](https://steamcommunity.com/id/Waffelo) 
 
 &nbsp;
 &nbsp;
@@ -40,7 +40,7 @@ In case your are interested in helping me out in projects and stuff. You can con
 
 &nbsp;
 &nbsp;
-## GPG Keys
+## GPG Keys (OUTDATED!)
 If you email me and want to have more privacy, or you want to send me some files, you can use my GPG key to encrypt the message.
 
 [Download my public key](/waffelo_public_key.gpg)

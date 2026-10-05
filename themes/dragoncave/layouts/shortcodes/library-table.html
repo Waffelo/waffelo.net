@@ -1,0 +1,18 @@
+<div class="info-box striped library-table">
+    <table>
+        <tr>
+            <th>Cover</th>
+            <th>Author</th>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Rating</th>
+            <th>Date of completion</th>
+        </tr>
+        {{ .Inner }}
+    </table>
+    {{ with .Get "caption" }}
+    <div class="info-box-caption">
+        <center>{{ . }}</center>
+    </div>
+    {{ end }}
+</div>

@@ -1,0 +1,21 @@
+<tr><!-- Start of book entry -->
+    <td>
+        <center>
+            {{ $alt := "" }}
+            {{ with .Get "alt" }}{{ $alt = printf " alt=%q" . }}{{ end }}
+            {{ $width := "" }}
+            {{ with .Get "width" }}{{ $width = printf " width=%q" . }}{{ end }}
+            {{ $img := printf "{{< optimized-img src=%q%s%s>}}" (.Get "src") $alt $width }}
+                {{ with .Get "wiki" }}<a href="{{ . }}" target="_blank">{{ end }}
+                    {{ $.Page.RenderString $img }}
+                    {{ if .Get "wiki" }}</a>{{ end }}
+        </center>
+    </td>
+    <td>{{ .Get "author" }}</td>
+    <td>{{ .Get "title" }}</td>
+    <td>{{ .Get "genre" }}</td>
+    <td>{{ .Get "rating" }}</td>
+    <td>
+        <center>{{ .Get "date" }}</center>
+    </td>
+</tr><!-- End of book entry -->

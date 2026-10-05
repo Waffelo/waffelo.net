@@ -2,7 +2,7 @@
 title = 'Using XMPP'
 date = 2025-05-19T07:15:31+02:00
 draft = false
-tags = ["chat", "xmpp", "software"]
+tags = ["chat", "software"]
 +++
 
 I have been using XMPP couple years ago pretty commonly, I would say It was

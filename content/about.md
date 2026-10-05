@@ -12,9 +12,9 @@ draft = false
     <div class="about-info">
         <h2 style="font-weight:900;">Waffelo</h2>
         <i>(Jakub Heger)</i><br>
-        <p><b>Age:</b> 20</p>
-        <p><b>Personality:</b> INFP-T</p>
-        <p><b>Languages:</b> SK, CZ, EN</p>
+        <p><b>Age:</b> 21</p>
+        <p><b>Personality:</b> INTJ-T</p>
+        <p><b>Languages:</b> SK, CZ, EN, TOK</p>
         <p><b>Printer:</b> Voron V2.4 r2 350</p>
         <p><b>Running:</b> Gentoo Linux</p>
     </div>

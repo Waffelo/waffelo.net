@@ -36,7 +36,7 @@ mkfs.ext4 /dev/sda1
 ```
 
 ```sh 
-mkfs.btrfs /dev/sda3
+mkfs.btrfs /dev/mapper/root
 ```
 
 ```sh 
@@ -457,7 +457,7 @@ You will most likely want to use sudo. You will have to add your user to the sud
 %wheel   ALL=(ALL:ALL) ALL
 ```
 
-You will have to save and exit from the file using `:wq!`.
+You will have to save and exit from the file using `:wq!`. (terrible habit ik)
 
 
 ## Leaving chroot

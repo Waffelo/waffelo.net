@@ -10,6 +10,11 @@ layout = 'standalone'
 Here are some less important things that wouldn't fit to navigation bar.
 Things will be added soon.
 
+## My stuff
 * [Fursona](/stuff/fursona) - My alt ego character.
 * [My vinyl](/stuff/vinyl) - My collection of music on the vinyl records. 
-* [Library](/stuff/library/) - Books in my personal library. <strong>TODO!</strong>
+* [Library](/stuff/library/) - Books in my personal library. 
+
+## Lists
+
+* [Friends](#) - Check out websites of my friends. (todo)

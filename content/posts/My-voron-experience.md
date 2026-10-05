@@ -2,7 +2,7 @@
 title = 'My Voron Experience'
 date = 2025-11-03T09:14:50+02:00
 draft = false
-tags = ['Voron', '3D Printing']
+tags = ['3D Printing']
 +++
 
 It all started with my Creality Ender 3 V2, which was starting to infuriate me because of it's state.
