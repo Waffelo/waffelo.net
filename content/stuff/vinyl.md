@@ -243,7 +243,7 @@ My turntable is <strong>Audio-Technica AT-LP60XUSB</strong>. And my current styl
                 <td>12/06/26</td>
                 <td><center>VG</center></td>
                 <td><center>M</center></td>
-                <td>Got for free hehe</td>
+                <td></td>
         </tr>
         <tr>
             <td>
