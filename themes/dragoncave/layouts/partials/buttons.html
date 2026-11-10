@@ -1,0 +1,23 @@
+{{ $paws := resources.Get "images/buttons/paws.webp" }}
+{{ $mlm := resources.Get "images/buttons/mlm.png" }}
+{{ $discord := resources.Get "images/buttons/discord-no-way.gif" }}
+{{ $hutchie := resources.Get "images/buttons/hutchie.png" }}
+
+
+&nbsp;
+&nbsp;
+&nbsp;
+<div class="buttons-box">
+    <div class="testo"><i class="fa-regular fa-flag"></i> Buttons:</div>
+    <div class="buttons-collection">
+        <h3>People:</h3>
+        <a href="https://hutchie.scot/" target="_blank"><img width="120px" src="{{ $hutchie.RelPermalink }}" alt="Hutchie button" /></a>
+        <a href="https://lightwo.net/" target="_blank"><img width="120px" src="https://lightwo.net/res/buttons/lightwo.gif" alt="lightwo button" title="lightwo" /></a>
+        
+        <h3>Misc:</h3>
+        <img width="120px" src="{{ $paws.RelPermalink }}">
+        <img width="120px" src="{{ $mlm.RelPermalink }}">
+        <img width="120px" src="{{ $discord.RelPermalink }}">
+
+        <br>Need to make my own too :< 
+</div>

@@ -1,5 +1,4 @@
-<h2><span style="color:gray;">#</span> Recent posts</h2>
-<div class="recentp-container">
+<!--<div class="recentp-container">
 
 	<div class="recentp-item">
 		<h2> Blog 📜 </h2>
@@ -24,3 +23,39 @@
 
 </div>
 <br>
+-->
+
+
+
+<div class="recent-posts-container">
+<div class="testo"><i class="fa-regular fa-newspaper"></i> blog-posts.db</div>
+	<div class="recent-posts">
+		
+			{{ range first 6 (where .Site.RegularPages "Section" "posts" ) }}
+				<a class="post-card" href="{{ .RelPermalink }}">
+					<div class="post-cover">
+						{{ $placeholder := resources.Get "images/placeholder_post.png" }}
+						<img src="{{ $placeholder.RelPermalink }}">
+					</div>
+					<h3><b>{{ .Title }}</b></h3>
+					<div class="flex">
+						<span class="post-date"><i class="fa-regular fa-calendar"></i> {{ .Date.Format "02/01/2006" }}</span>
+						{{ with .Params.tags }}
+							<div class="post-tags">
+							<i class="fa-solid fa-tags"></i>
+							{{ range . }}<span class="tag">{{ . }} </span>{{ end }}
+							</div>
+						{{ end }}
+					</div>
+
+
+
+
+				</a>
+				
+			{{ end }}
+	</div>
+	<div class="recent-posts-footer"><center><p>For more, check the <a href="#">Archive</a>.</p></center></div>
+</div>
+
+

@@ -1,14 +1,10 @@
-<center><h1>Welcome to my website!</h1></center><hr style="margin-left:auto;margin-right:auto;margin-top;0px;">
-
-Hi! Welcome to my personal website and blog. I made this
-website to present myself, my projects, thoughts and opinions. I hope
-to post here regularly since I remade my website in static site generator.
-This website is primarly focused on topics such as technology and topics,
-but it is not limited to them. I like to ramble about other things too.
-
-&nbsp;
-&nbsp;
-{{< optimized-img src="images/fursona/stickers/waffiphus.png" alt="Desktop fastfetch" width="250" class="center">}}
- 
+---
+title: "Home"
+---
 
 
+<center><h1>Welcome</h1></center>
+<p style="font-size:16px; text-align:justify;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue eget ex vitae fringilla. Morbi lobortis et ante nec efficitur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis non felis malesuada, fringilla magna ut, porttitor lectus. Curabitur fermentum purus nec sapien porttitor, et cursus nisi sodales.
+</p>
+
+   {{< optimized-img src="images/fursona/stickers/waffiphus.png" alt="Desktop fastfetch" width="200" class="center">}}

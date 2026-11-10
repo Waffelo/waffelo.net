@@ -1,4 +1,17 @@
 {{ define "main" }}
+{{ partial "profile-card.html" .Page }}
+
+<div class="welcome">
+    <div class="testo"><i class="fa-brands fa-vim"></i> Welcome.md</div>
+    <div class="welcome-text">
+            {{.Content}}
+    </div>
+</div>
+&nbsp;
+
+
 {{ partial "recent-posts.html" . }}
-{{.Content}}
+{{ partial "buttons.html" . }}
+
+
 {{ end }}

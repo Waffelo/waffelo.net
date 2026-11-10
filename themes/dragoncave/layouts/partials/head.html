@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ "css/colors-default-dark.css" | absURL }}">
     <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
     <link rel="icon" href="{{ "img/favicon.png" | relURL }}" type="image/png">
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
 
     {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
