@@ -18,6 +18,10 @@ theme = 'dragoncave'
   siteHeaderText = "~/Waffelo's Den"
   siteFooterText = "© 2026 Jakub Heger"
   imageProcessing = true
+  
+[params.author]
+  name = "Waffelo"
+  email = "contact@waffelo.net"
 
 [params.hcard]
     avatar = "/img/pfp.png"

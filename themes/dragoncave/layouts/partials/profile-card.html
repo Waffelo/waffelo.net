@@ -6,10 +6,16 @@
 
     <div class="profile-card-item">
         <div class="profile-card-item-pfp">
-            <img src="{{ $pfp.RelPermalink }}" alt="Logo" >
-            <div class="profile-card-item-pfp-status"></div>
-        </div>
+        <img src="{{ $pfp.RelPermalink }}" alt="Logo">
+        <div id="mx-status" class="profile-card-item-pfp-status offline">
+            <span class="mx-tip">
+        <i class="fa-brands fa-matrix"></i> @waffelo:drgnz.club<br>
+        <span id="mx-seen">Offline</span>
+    </span>
+</div>
+</div>
     </div>
+    
     <div class="profile-card-item">
         <div class="profile-card-item-info">
             <h1>Waffelo</h1>
@@ -22,6 +28,7 @@
 
         </div>
     </div>
+
     <div class="profile-card-item">
             <div class="profile-card-item-side">
                <div class="testo"><i class="fa-regular fa-star"></i> Important:</div>
@@ -31,7 +38,48 @@
     <div class="profile-card-under">
         <div class="testo"><i class="fa-solid fa-tags"></i> Tags:</div>
         <div class="profile-card-under-inside">
-            [Voron] [Gentoo Linux] [Meshtastic] [IDK] [WHAT] [HERE] lmao 
+            <div class="tagg"><i class="fa-solid fa-cube"></i> Voron</div>
+            <div class="tagg"><i class="fa-solid fa-circle-nodes"></i> Meshtastic</div>
+            <div class="tagg"><i class="fa-brands fa-linux"></i> Gentoo Linux</div>
+            <div class="tagg"><i class="fa-solid fa-gear"></i> Factorio</div>
+
+            <div class="tagg"><i class="fa-solid fa-cubes"></i> Minecraft</div>
+
         </div>
     </div>
 </div>
+
+<script>
+  function timeAgo(ms) {
+    const s = Math.floor(ms / 1000);
+    if (s < 60) return 'just now';
+    const m = Math.floor(s / 60);
+    if (m < 60) return m + ' min ago';
+    const h = Math.floor(m / 60);
+    if (h < 24) return h + ' h ago';
+    return Math.floor(h / 24) + ' d ago';
+  }
+
+  async function mxStatus() {
+    const el = document.getElementById('mx-status');
+    const base = 'profile-card-item-pfp-status ';
+    let label = 'Offline', seen = '';
+    try {
+      const r = await fetch('https://waffelo.net/presence/waffelo');
+      if (!r.ok) throw new Error(r.status);
+      const p = await r.json();
+      el.className = base + p.presence;
+      label = { online: 'Online', unavailable: 'Idle', offline: 'Offline' }[p.presence] ?? p.presence;
+      if (p.currently_active) seen = 'active now';
+      else if (p.last_active_ago != null) seen = 'last seen ' + timeAgo(p.last_active_ago);
+    } catch (e) {
+      console.warn('matrix status:', e);
+      el.className = base + 'offline';
+    }
+    document.getElementById('mx-seen').textContent = label + (seen ? ' · ' + seen : '');
+  }
+
+  mxStatus();
+  setInterval(() => { if (!document.hidden) mxStatus(); }, 15000);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) mxStatus(); });
+</script>
